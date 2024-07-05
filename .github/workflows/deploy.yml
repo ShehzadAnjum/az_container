@@ -35,7 +35,7 @@ jobs:
         run: |
           az containerapp create \
             --name mycontainerapp \
-            --resource-group testresourcegroup \
+            --resource-group myresourcegroup \
             --environment mycontainerappenv \
             --image ${{ secrets.DOCKER_HUB_USERNAME }}/myapp:latest \
             --target-port 8000 \
