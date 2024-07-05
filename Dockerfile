@@ -11,13 +11,13 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Poetry
-# RUN pip install poetry
+RUN pip install poetry
 
 # Copy the current directory contents into the container at /code
 COPY . /code/
 
 # Configuration to avoid creating virtual environments inside the Docker container
-# RUN poetry config virtualenvs.create false
+RUN poetry config virtualenvs.create false
 
 # Install dependencies including development ones
 RUN poetry install --no-dev
