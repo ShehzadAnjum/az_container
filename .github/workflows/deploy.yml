@@ -32,7 +32,7 @@ jobs:
       - name: Run tests
         run: |
           # poetry run pytest -v
-          # pytest -v
+          pytest -v
 
       - name: Log in to Docker Hub
         run: |
