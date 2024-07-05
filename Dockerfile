@@ -20,7 +20,8 @@ COPY . /code/
 RUN poetry config virtualenvs.create false
 
 # Install dependencies including development ones
-RUN poetry install --no-dev
+# RUN poetry install --no-dev  ##depreciated##
+RUN poetry install --only main
 
 # Make port 8000 available to the world outside this container
 EXPOSE 8000
