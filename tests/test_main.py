@@ -12,7 +12,7 @@ def test_index():
 def test_name():
     response = client.get("/name")
     assert response.status_code == 200
-    assert response.json() == {"name":"ShehzadAnjum"}
+    assert response.json() == {"name":"Shehzad Anjum"}
 
 def test_batch():
     response = client.get("/batch")
