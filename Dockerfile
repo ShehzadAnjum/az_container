@@ -22,6 +22,8 @@ RUN poetry config virtualenvs.create false
 # Install dependencies including development ones
 RUN poetry install
 
+RUN pytest -v
+
 # Make port 8000 available to the world outside this container
 EXPOSE 8000
 
