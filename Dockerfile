@@ -17,10 +17,10 @@ RUN apt-get update && apt-get install -y \
 COPY . /code/
 
 # Configuration to avoid creating virtual environments inside the Docker container
-RUN poetry config virtualenvs.create false
+# RUN poetry config virtualenvs.create false
 
 # Install dependencies including development ones
-RUN poetry install 
+RUN poetry install --no-dev
 
 # Make port 8000 available to the world outside this container
 EXPOSE 8000
