@@ -11,5 +11,5 @@ def name():
     return({"name":"Shehzad Anjum"})
 
 @app.get("/batch")
-def name():
+def batch():
     return({"batch":"36-37 Cloud computing and GenAI "})
